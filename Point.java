@@ -19,17 +19,17 @@ public Point copy(){
     //OR
     //return new Point(this);
 }
-public double getx(){
+public double getX(){
   return x;
 }
-public double gety(){
+public double getY(){
   return y;
 }
 public double distanceTo(Point fpoint){
   return java.lang.Math.sqrt( ((fpoint.x - this.x) * (fpoint.x - this.x)) + ((fpoint.y - this.y) * (fpoint.y - this.y)) );
 }
-public double distance(Point thispoint, Point thatpoint){
-  return java.lang.Math.sqrt( ((thispoint.x - thatpoint.x) * (thispoint.x - thatpoint.x)) + ((thispoint.y - thatpoint.y) * (thispoint.y - thatpoint.y)) );
+public static double distance(Point firstpoint, Point secondpoint){
+  return java.lang.Math.sqrt( ((firstpoint.getX() - secondpoint.getX()) * (firstpoint.getX() - secondpoint.getX())) + ((firstpoint.getY() - secondpoint.getY()) * (firstpoint.getY() - secondpoint.getY())));
 }
 public String toString() {
   return "(" + x + "," + y + ")";
